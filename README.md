@@ -11,8 +11,8 @@
 
 
 ### Association
-- has_many: orders
-- has_many: items
+- has_many: vehicles
+- has_many: vehicles_fixes
 
 
 ## vehiclesテーブル
