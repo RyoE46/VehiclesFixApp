@@ -1,24 +1,53 @@
 # README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
-* Ruby version
 
-* System dependencies
+### Association
+- has_many: orders
+- has_many: items
 
-* Configuration
 
-* Database creation
+## vehiclesテーブル
 
-* Database initialization
+| Column          | Type       | Options                        |
+|---------------- | ---------- | ------------------------------ |
+| manufacturer    | string     | null: false                    |
+| vehicle_name    | text       | null: false                    |
+| next_inspection | integer    |                                |
+| user            | references | null: false, foreign_key: true |
+| vehicle_type_id | integer    | null: false                    |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- has_many: vehicles_fixes
+- belongs_to: user
+- belongs_to: vehicle_type
+- has_one_attached: image
 
-* Deployment instructions
 
-* ...
+## vehicles_fixesテーブル
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| title       | string     | null: false                    |
+| content     | text       | null: false                    |
+| mileage     | string     |                                |
+| fix_spot_id | integer    | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| vehicle     | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to: user
+- belongs_to: vehicles
+- belongs_to: fix_spot
+- has_one_attached: image
+
