@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2022_11_30_022230) do
     t.string "manufacturer"
     t.string "vehicle_name"
     t.string "next_inspection"
-    t.integer "vehicle_type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -6,7 +6,7 @@ class CreateVehicles < ActiveRecord::Migration[6.0]
       t.string     :next_inspection
       # t.references :user, null: false, foreign_key: true
       # ユーザー機能追加後にコメントアウト
-      t.integer    :vehicle_type_id, null: false
+      #t.integer    :vehicle_type_id, null: false
       t.timestamps
     end
   end

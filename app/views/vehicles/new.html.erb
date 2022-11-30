@@ -1,0 +1,7 @@
+<%= form_with model: @vehicle, local: true do |f| %>
+  <%= f.text_field :manufacturer, placeholder: "メーカー" %><br>
+  <%= f.text_field :vehicle_name, placeholder: "車種名" %><br>
+  <%= f.text_field :next_inspection, placeholder: "次回車検年月日（任意）" %><br>
+  <%= f.submit '登録'%>
+  <%=link_to 'もどる', root_path, class:"back-btn" %>
+<% end %>
