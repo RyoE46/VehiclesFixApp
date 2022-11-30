@@ -1,7 +1,43 @@
-<%= form_with model: @vehicle, local: true do |f| %>
-  <%= f.text_field :manufacturer, placeholder: "メーカー" %><br>
-  <%= f.text_field :vehicle_name, placeholder: "車種名" %><br>
-  <%= f.text_field :next_inspection, placeholder: "次回車検年月日（任意）" %><br>
-  <%= f.submit '登録'%>
-  <%=link_to 'もどる', root_path, class:"back-btn" %>
-<% end %>
+<%= render "shared/second-header" %>
+<div class="vehicle-info-contents">
+  <div class="vehicle-info-main">
+    <h2 class="vehicle-info-title">Enter your vehicle information</h2>
+    <%= form_with model: @vehicle, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 追加車種の情報 %>
+    <div class="new-vehicles">
+      <div class="weight-bold-text">
+        メーカー
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :manufacturer, class:"vehicles-text", id:"manufacturer", placeholder:"例 : BMW"%>
+      <div class="vehicles-explain">
+        <div class="weight-bold-text">
+          車種名
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :vehicle_name, class:"vehicles-text", id:"vehicle-name", placeholder:"例 : E46 330i"  %>
+      </div>
+      <div class="vehicles-explain">
+        <div class="weight-bold-text">
+          次回車検年月
+        </div>
+        <%= f.text_field :next_inspection, class:"vehicles-text", id:"next-inspection", placeholder: "例 : 令和5年7月"  %>
+      </div>
+    </div>
+    <%# /追加車種の情報 %>
+
+    <div class="register-btn-contents">
+      <%= f.submit "Register your vehicle" ,class:"register-btn" %>
+      <%=link_to 'Back', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+
+</div>
+
+ <%= render "shared/footer" %>

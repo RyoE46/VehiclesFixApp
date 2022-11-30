@@ -1,0 +1,76 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap');
+
+
+/* 車種一覧 */
+
+.vehicle-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.vehicle-contents>.title {
+  font-size: 15vh;
+
+  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+
+}
+
+.vehicle-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vehicle-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.vehicle-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.vehicle-manufacturer {
+  font-size: 2.5vh;
+}
+
+.vehicle-name {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-vehicle-info {
+  font-size: 3vh;
+  line-height: 15;
+  font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
+}
+
+/* //商品一覧 */

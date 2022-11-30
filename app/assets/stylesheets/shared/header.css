@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://themes.googleusercontent.com/static/fonts/kaushanscript/v1/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
+}
+
+
+
+.top-page-header {
+  background-color: antiquewhite;
+  width: 100vw;
+  height: 138px;
+  padding: 2vh 3vw;
+  display: flex;
+
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-main{
+  display: flex;
+}
+
+.header-main-title {
+
+  color: #000000;
+  font-size: 60px;
+  font-family: 'Kaushan Script';
+
+  line-height: 100px;
+}
+
+.Vehicle-fix-title-png {
+  width: 80px;
+  padding: 5px;
+}
+
+.lists-right {
+  display: flex;
+  list-style:none;
+  align-items: flex-end;
+  line-height: 110px;
+  font-size: 20px;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #000000;
+  font-weight: bold;
+
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #000000;
+
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #000000;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #000000;
+}

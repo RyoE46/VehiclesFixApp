@@ -1,13 +1,38 @@
-<div>
-  <% @vehicles.each do |vehicle| %>
-    メーカー：<%= vehicle.manufacturer %><br>
-    車種名：<%= vehicle.vehicle_name %><br>
-    次回車検年月日（任意）：<%= vehicle.next_inspection %><br><br>
-  <% end %>
+<%= render "shared/header" %>
+<div class='main'>
+ <%# 商品一覧 %>
+  <div class='vehicle-contents'>
+    <h2 class='title'>Vehicle List</h2>
+    <ul class='vehicle-lists'>
+
+      <% @vehicles.each do |vehicle| %>
+        <li class='list'>
+          <%= link_to vehicle_path(vehicle.id) do %>
+
+            <div class='vehicle-info'>
+              <h3 class='vehicle-manufacturer'>
+                <%= vehicle.manufacturer %><br>
+                <%= vehicle.vehicle_name %><br>
+              </h3>
+              <div class='vehicle-name'>
+                <span>次回車検年月日：<%= vehicle.next_inspection %><br><br></span>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if @vehicles.empty? %>
+              <div class='new-vehicle-info'>
+                  Please register your vehicles
+              </div>
+      <% end %>
+      
+    </ul>
+  </div>
 </div>
 <%= link_to('/vehicles/new', class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>車種を登録する</span>
+  <span class='purchase-btn-text'>Register Your Vehicle</span>
 <% end %>
 
-
-
+<%= render "shared/footer" %>

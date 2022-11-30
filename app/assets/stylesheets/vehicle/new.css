@@ -1,0 +1,123 @@
+/* border-bottom: 1px solid #eee; */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+.vehicle-info-contents {
+  background-color: #f0ebe4;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+  width: 100vw;
+}
+
+.vehicle-info-main {
+  background-color: #FFF;
+  width: 65vw;
+  min-width: 450px;
+  padding: 5vh 18vw 15vh;
+}
+
+.vehicle-info-title {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  padding-bottom: 15px;
+}
+
+/* 共通 */
+.indispensable {
+  background: #fe8c00a8;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 30px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+
+/* /共通 */
+
+
+/* 商品名と商品説明 */
+.new-vehicles {
+  padding: 2vh 0;
+}
+
+.vehicles-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.vehicles-explain {
+  margin-top: 2vh;
+}
+
+/* /商品名と商品説明 */
+
+/* 商品の詳細など */
+.items-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.vehicles-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
+/* /商品の詳細など */
+
+/* 下部ボタン */
+.register-btn-contents {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0px ;
+
+}
+
+.register-btn {
+  background: #744f06b3;
+  border: 1px solid #744f06b3;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 4vh;
+  border-radius: 10px;
+}
+
+.back-btn {
+  background: #221702b3;
+  border: 1px solid #221702b3;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* /下部ボタン */
