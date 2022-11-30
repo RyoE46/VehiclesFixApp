@@ -1,0 +1,13 @@
+<div>
+  <% @vehicles.each do |vehicle| %>
+    メーカー：<%= vehicle.manufacturer %><br>
+    車種名：<%= vehicle.vehicle_name %><br>
+    次回車検年月日（任意）：<%= vehicle.next_inspection %><br><br>
+  <% end %>
+</div>
+<%= link_to('/vehicles/new', class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>車種を登録する</span>
+<% end %>
+
+
+

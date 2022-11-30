@@ -12,7 +12,7 @@
 
 ### Association
 - has_many: vehicles
-- has_many: vehicles_fix
+- has_many: vehicles_fixes
 
 
 ## vehiclesテーブル
