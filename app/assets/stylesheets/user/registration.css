@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+
 .registration-main {
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: #f0ebe4;
   display: flex;
   justify-content: center;
 }
@@ -10,7 +13,7 @@
 /* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
   width: 50%;
-  background-color: white;
+  background-color: #ffffff;
   padding-bottom: 70px;
 }
 
@@ -19,12 +22,15 @@
   height: 120px;
   text-align: center;
   font-size: 22px;
+  padding-bottom: 50px;
 }
 
 .form-header-text {
   line-height: 100px;
-  border-bottom: 1px solid #f5f5f5;
   font-weight: bold;
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+
 }
 
 .form-group {
@@ -45,8 +51,10 @@
 }
 
 .form-text {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+
 }
 
 .input-default {
@@ -89,7 +97,7 @@
   padding: 10px 16px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  background: #fff;
+  background: #f0ebe4;
   font-size: 14px;
   resize: none;
 }
@@ -105,7 +113,7 @@
   height: 45px;
   padding-left: 10px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #FFF;
   background: #fff;
   font-size: 12px;
   cursor: pointer;
@@ -140,21 +148,18 @@
 .register-btn {
   width: 50%;
   margin: 0 auto;
+
 }
 
 .register-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #744f06b3;
+  border: 1px solid #744f06b3;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 25px;
   cursor: pointer;
-}
+  margin-top: 80px;
+  border-radius: 10px;
 
-.register-info {
-  margin: 30px 180px 0 0;
-  color: #0099e8;
-  text-align: right;
-  cursor: pointer;
 }
