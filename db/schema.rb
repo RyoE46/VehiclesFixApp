@@ -26,11 +26,14 @@ ActiveRecord::Schema.define(version: 2022_11_30_135357) do
   end
 
   create_table "vehicles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "manufacturer"
-    t.string "vehicle_name"
-    t.string "next_inspection"
+    t.string "manufacturer", null: false
+    t.string "vehicle_name", null: false
+    t.string "next_inspection", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
+  add_foreign_key "vehicles", "users"
 end
