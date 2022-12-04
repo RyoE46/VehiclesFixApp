@@ -1,6 +1,8 @@
 <div class='footer'>
   <div class='footer-contents'>
-    
+    <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "footer-logout" %> 
+    <% end %>
   </div>
   <p>© 伊沢重工業</p>
 </div>
