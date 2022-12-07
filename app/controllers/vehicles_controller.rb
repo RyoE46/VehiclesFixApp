@@ -20,7 +20,7 @@ class VehiclesController < ApplicationController
 
   private
   def vehicle_params
-    params.require(:vehicle).permit(:manufacturer, :vehicle_name, :next_inspection).merge(user_id: current_user.id)
+    params.require(:vehicle).permit(:manufacturer, :image, :vehicle_name, :next_inspection).merge(user_id: current_user.id)
   end
 end
 

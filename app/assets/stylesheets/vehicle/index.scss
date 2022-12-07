@@ -41,13 +41,13 @@ a {
   background-color: #FFF;
 }
 
-.item-img-content {
+.vehicle-img-content {
   position: relative;
 }
 
-.item-img {
-  width: 33vh;
-  height: 33vh;
+.vehicle-img {
+  width: 32vh;
+  height: 18vh;
 }
 
 .vehicle-info {
@@ -57,11 +57,11 @@ a {
 }
 
 .vehicle-manufacturer {
-  font-size: 2.5vh;
+  font-size: 3vh;
 }
 
-.vehicle-name {
-  font-size: 1.5vh;
+.vehicle-inspection {
+  font-size: 2vh;
   display: flex;
   justify-content: space-between;
 }
