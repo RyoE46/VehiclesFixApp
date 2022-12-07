@@ -9,12 +9,16 @@
         <li class='list'>
           <%= link_to vehicle_path(vehicle.id) do %>
 
+            <div class='vehicle-img-content'>
+              <%= image_tag vehicle.image, class: "vehicle-img" %>
+            </div>
+
             <div class='vehicle-info'>
               <h3 class='vehicle-manufacturer'>
                 <%= vehicle.manufacturer %><br>
                 <%= vehicle.vehicle_name %><br>
               </h3>
-              <div class='vehicle-name'>
+              <div class='vehicle-inspection'>
                 <span>次回車検年月日：<%= vehicle.next_inspection %><br><br></span>
               </div>
             </div>

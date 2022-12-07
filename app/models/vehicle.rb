@@ -6,7 +6,7 @@ class Vehicle < ApplicationRecord
   #has_many: vehicles_fixes
   belongs_to :user
   #belongs_to: vehicle_type
-  #has_one_attached: image
+  has_one_attached :image
 end
 
 
