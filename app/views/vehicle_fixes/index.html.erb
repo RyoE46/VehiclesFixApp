@@ -2,10 +2,10 @@
 <div class='main'>
  <%# 商品一覧 %>
   <div class='vehicle-contents'>
-    <h2 class='fix-title'>
-        <%= @vehicle.vehicle_name %><br>
-        maintenance records
-    </h2>
+      <div class='fix-title'>
+        <%= @vehicle.vehicle_name %>
+      </div>
+
     <ul class='vehicle-lists'>
 
       <% @vehicle_fixes.each do |vehicle_fix| %>

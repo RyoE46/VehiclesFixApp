@@ -6,11 +6,11 @@ class VehicleFixesController < ApplicationController
   end
 
   def new
-    @vehicle_fix = Vehicle_fix.new
+    @vehicle_fix = VehicleFix.new
   end
 
   def create
-    @vehicle_fix = Vehicle_fix.new(vehicle_fix_params)
+    @vehicle_fix = VehicleFix.new(vehicle_fix_params)
     if @vehicle_fix.save
       redirect_to vehicle_vehicle_fixes_path
     else

@@ -49,7 +49,7 @@
   display: flex;
   list-style:none;
   align-items: flex-end;
-  line-height: 110px;
+  line-height: 115px;
   font-size: 20px;
 }
 
@@ -58,7 +58,6 @@
   text-decoration: none;
   margin-right: 3vw;
   color: #000000;
-
 }
 
 .login {
@@ -71,3 +70,4 @@
   text-decoration: none;
   color: #000000;
 }
+
