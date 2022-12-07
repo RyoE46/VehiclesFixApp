@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_05_013657) do
+ActiveRecord::Schema.define(version: 2022_12_07_111322) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(version: 2022_12_05_013657) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "vehicle_fixes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "content", null: false
+    t.string "mileage"
+    t.bigint "user_id", null: false
+    t.bigint "vehicle_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_vehicle_fixes_on_user_id"
+    t.index ["vehicle_id"], name: "index_vehicle_fixes_on_vehicle_id"
+  end
+
   create_table "vehicles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "manufacturer", null: false
     t.string "vehicle_name", null: false
@@ -56,6 +68,22 @@ ActiveRecord::Schema.define(version: 2022_12_05_013657) do
     t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
+  create_table "vehicles_fixes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "content", null: false
+    t.string "mileage"
+    t.bigint "user_id", null: false
+    t.bigint "vehicle_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_vehicles_fixes_on_user_id"
+    t.index ["vehicle_id"], name: "index_vehicles_fixes_on_vehicle_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "vehicle_fixes", "users"
+  add_foreign_key "vehicle_fixes", "vehicles"
   add_foreign_key "vehicles", "users"
+  add_foreign_key "vehicles_fixes", "users"
+  add_foreign_key "vehicles_fixes", "vehicles"
 end

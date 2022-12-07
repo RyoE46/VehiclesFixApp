@@ -21,3 +21,24 @@
 .purchase-btn-icon {
   width: 60%;
 }
+
+.destroy-btn{
+  display: block;
+  margin-top: 110px;
+  background-color: #6e6d6db2;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+.edit-btn{
+  background: #6e6d6d;
+  text-align: center;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  padding: 7px;
+  font-size: 10px;
+}

@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+<div class='main'>
+ <%# 商品一覧 %>
+  <div class='vehicle-contents'>
+    <h2 class='fix-title'>
+        <%= @vehicle.vehicle_name %><br>
+        maintenance records
+    </h2>
+    <ul class='vehicle-lists'>
+
+      <% @vehicle_fixes.each do |vehicle_fix| %>
+        
+          <li class='list'>
+
+            <div class='vehicle-img-content'>
+              <%= image_tag vehicle_fix.image, class: "vehicle-img" %>
+            </div>
+
+            <div class='vehicle-info'>
+              <h3 class='vehicle-manufacturer'>
+                <%= vehicle_fix.title %><br>
+                <%= vehicle_fix.content %><br>
+              </h3>
+              <div class='vehicle-inspection'>
+                <span>走行距離：<%= vehicle_fix.mileage %><br><br></span>
+              </div>
+            </div>
+
+          </li>
+      <% end %>
+
+      <% if @vehicle_fixes.empty? %>
+              <div class='new-vehicle-info'>
+                  Please register your Register your repair details for vehicle 
+              </div>
+      <% end %>
+      
+    </ul>
+  </div>
+</div>
+<%= link_to('/vehicles/:vehicle_id/vehicle_fixes/new', class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>Register Your Repair Details</span>
+<% end %>
+
+<%= render "shared/footer" %>
