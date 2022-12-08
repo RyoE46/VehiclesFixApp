@@ -1,0 +1,55 @@
+<%= render "shared/second-header" %>
+
+<div class="repair-info-contents">
+  <div class="repair-info-main">
+    <h2 class="repair-info-title">Enter Repair Details</h2>
+    <%= form_with model: @vehicle_fix, url: vehicle_vehicle_fix_path(@vehicle_fix.id), local: true do |f| %>
+
+
+
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          変更箇所画像
+        </div>
+        <div class="click-upload">
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+
+      <%# 修理箇所の情報 %>
+      <div class="new-explain">
+        <div class="weight-bold-text">
+          タイトル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :title, class:"repair-text", id:"title", placeholder:"例 : ブレーキパッド交換"%>
+      </div>
+
+      <div class="repair-explain">
+        <div class="weight-bold-text">
+          詳細内容
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :content, class:"repair-text", id:"content", placeholder:"例 : メーカーは〇〇で......"  %>
+      </div>
+
+      <div class="repair-explain">
+        <div class="weight-bold-text">
+          走行距離(半角数字)
+        </div>
+        <%= f.text_field :mileage, class:"repair-text", id:"mileage", placeholder: "例 : 145608"  %>
+      </div>
+
+
+      <%# /追加車種の情報 %>
+
+      <div class="register-btn-contents">
+        <%= f.submit "Register Repair Details" ,class:"register-btn" %>
+        <%=link_to 'Back', vehicle_vehicle_fixes_path, class:"back-btn" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

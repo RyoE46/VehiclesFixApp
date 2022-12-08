@@ -6,6 +6,12 @@
         <%= @vehicle.vehicle_name %>
       </div>
 
+      <% if @vehicle_fixes.empty? %>
+        <div class='new-repair-info'>
+            Please register your Register your repair details for vehicle 
+        </div>
+      <% end %>
+
     <ul class='repair-lists'>
 
       <% @vehicle_fixes.each do |vehicle_fix| %>
@@ -16,10 +22,10 @@
               <%= vehicle_fix.title %>
             </div>
 
-            <%=link_to 'Edit Information', '#', class:"edit-btn" %>
+            <%=link_to 'Edit Information', edit_vehicle_vehicle_fix_path(@vehicle.id, id: vehicle_fix.id),class:"edit-btn" %>
 
             <div class='repair-info'>
-                <%= vehicle_fix.content %><br>
+                <%= safe_join(vehicle_fix.content.split("\n"),tag(:br)) %>
             </div>
 
             <div class='repair-inspection'>
@@ -36,11 +42,7 @@
           </li>
       <% end %>
 
-      <% if @vehicle_fixes.empty? %>
-              <div class='new-repair-info'>
-                  Please register your Register your repair details for vehicle 
-              </div>
-      <% end %>
+
       
     </ul>
   </div>
