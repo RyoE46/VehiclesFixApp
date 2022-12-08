@@ -6,6 +6,7 @@ class Vehicle < ApplicationRecord
 
   #validates :vehicle_type_id, numericality: { other_than: 1, message: "can't be blank" }
 
+
   has_many :vehicle_fixes, dependent: :destroy
   belongs_to :user
   #belongs_to :vehicle_type

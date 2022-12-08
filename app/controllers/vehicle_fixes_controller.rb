@@ -3,7 +3,7 @@ class VehicleFixesController < ApplicationController
 
   def index
     @vehicle = Vehicle.find(params[:vehicle_id])
-    @vehicle_fixes = VehicleFix.where(vehicle_id:params[:vehicle_id]).order('created_at DESC')
+    @vehicle_fixes = VehicleFix.all.order('created_at DESC')
   end
 
   def new
@@ -29,11 +29,16 @@ class VehicleFixesController < ApplicationController
   def update
     @vehicle_fix = VehicleFix.find(params[:id])
     if @vehicle_fix.update(vehicle_fix_params)
-
       redirect_to vehicle_vehicle_fixes_path
     else
       render :edit
     end
+  end
+
+  def destroy
+    @vehicle_fix = VehicleFix.find(params[:id])
+    @vehicle_fix.destroy
+    redirect_to root_path
   end
 
   private
@@ -41,7 +46,9 @@ class VehicleFixesController < ApplicationController
     params.require(:vehicle_fix).permit(:title, :content, :image, :mileage).merge(user_id: current_user.id, vehicle_id: @vehicle.id)
   end
 
-
+  def set_vehicle
+    @vehicle = Vehicle.find(params[:vehicle_id])
+  end
 
 end
 
