@@ -18,10 +18,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 20px;
 }
 
 .repair-title{
   font-size: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
 }
 
 .repair-content{
