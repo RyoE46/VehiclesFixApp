@@ -14,14 +14,19 @@
 
 
 .repair-lists {
-  width: 70vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  width: 65vw;
+}
+
+.repair-list{
+  padding-bottom: 10px;
 }
 
 .repair-title{
   font-size: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
 }
 
 .repair-content{
