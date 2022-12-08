@@ -1,0 +1,54 @@
+/* border-bottom: 1px solid #eee; */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+.repair-info-contents {
+  background-color: #f0ebe4;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+  width: 100vw;
+}
+
+.repair-info-main {
+  background-color: #FFF;
+  width: 77vw;
+  min-width: 450px;
+  padding: 5vh 18vw 15vh;
+}
+
+.repair-info-title {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  padding-top: 4vw;
+  padding-bottom: 10vw;
+}
+
+
+
+
+.repair-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.repair-explain {
+  margin-top: 2vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
