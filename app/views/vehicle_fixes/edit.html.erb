@@ -3,8 +3,7 @@
 <div class="repair-info-contents">
   <div class="repair-info-main">
     <h2 class="repair-info-title">Enter Repair Details</h2>
-    <%= form_with model: @vehicle_fix, url: vehicle_vehicle_fix_path, local: true do |f| %>
-
+    <%= form_with model: [@vehicle, @vehicle_fix], url: vehicle_vehicle_fix_path(@vehicle.id), local: true do |f| %>
 
 
       <div class="img-upload">
@@ -46,7 +45,7 @@
       <div class="register-btn-contents">
         <%= f.submit "Register Repair Details" ,class:"register-btn" %>
         <%=link_to 'Back', vehicle_vehicle_fixes_path, class:"back-btn" %>
-        <%= link_to "Delete this vehicle all information", vehicle_vehicle_fix_path(@vehicle_fix.id), method: :delete, class:"destroy-btn" %>
+        <%= link_to "Delete this vehicle all information", vehicle_vehicle_fix_path(@vehicle.id, @vehicle_fix.id), method: :delete, class:"destroy-btn" %>
       </div>
 
     <% end %>

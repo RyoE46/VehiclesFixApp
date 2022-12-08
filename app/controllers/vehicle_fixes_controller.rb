@@ -3,7 +3,7 @@ class VehicleFixesController < ApplicationController
 
   def index
     @vehicle = Vehicle.find(params[:vehicle_id])
-    @vehicle_fixes = VehicleFix.all.order('created_at DESC')
+    @vehicle_fixes = VehicleFix.where(vehicle_id:params[:vehicle_id]).order('created_at DESC')
   end
 
   def new
@@ -27,6 +27,7 @@ class VehicleFixesController < ApplicationController
   end
 
   def update
+    @vehicle = Vehicle.find(params[:vehicle_id])
     @vehicle_fix = VehicleFix.find(params[:id])
     if @vehicle_fix.update(vehicle_fix_params)
       redirect_to vehicle_vehicle_fixes_path
@@ -38,12 +39,12 @@ class VehicleFixesController < ApplicationController
   def destroy
     @vehicle_fix = VehicleFix.find(params[:id])
     @vehicle_fix.destroy
-    redirect_to root_path
+    redirect_to vehicle_vehicle_fixes_path
   end
 
   private
   def vehicle_fix_params
-    params.require(:vehicle_fix).permit(:title, :content, :image, :mileage).merge(user_id: current_user.id, vehicle_id: @vehicle.id)
+    params.require(:vehicle_fix).permit(:id, :title, :content, :image, :mileage).merge(user_id: current_user.id, vehicle_id: @vehicle.id)
   end
 
   def set_vehicle
