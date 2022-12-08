@@ -1,0 +1,2 @@
+module VehicleFixesHelper
+end

@@ -1,0 +1,54 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <div class='repair-contents'>
+ 
+      <div class='fix-title'>
+        <%= @vehicle.vehicle_name %>
+      </div>
+
+    <ul class='repair-lists'>
+
+      <% @vehicle_fixes.each do |vehicle_fix| %>
+        
+          <li class='list'>
+
+            <div class='repair-title'>
+                <%= vehicle_fix.title %>
+            </div>
+
+            <%=link_to 'Edit Information', '#', class:"edit-btn" %>
+
+            <div class='repair-info'>
+                <%= vehicle_fix.content %><br>
+            </div>
+
+            <div class='repair-inspection'>
+              走行距離：<%= vehicle_fix.mileage %>Km
+            </div>
+            
+            <div class='vehicle-img-content'>
+              <% if vehicle_fix.image.present? %>
+                <%= image_tag vehicle_fix.image, class: "vehicle-img" %>
+              <% else %>
+                <h1 class='no-img-text'>No Image</h1>
+              <% end %>
+            </div>
+          </li>
+      <% end %>
+
+      <% if @vehicle_fixes.empty? %>
+              <div class='new-repair-info'>
+                  Please register your Register your repair details for vehicle 
+              </div>
+      <% end %>
+      
+    </ul>
+  </div>
+
+</div>
+<%= link_to new_vehicle_vehicle_fix_path(@vehicle.id), class: 'purchase-btn' do %> 
+  <span class='purchase-btn-text'>Register Your Repair Details</span>
+<% end %>
+
+<%= render "shared/footer" %>
+

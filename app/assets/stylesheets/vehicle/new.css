@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
 
-/* userのregisでも使用 */
 .vehicle-info-contents {
   background-color: #f0ebe4;
   font-size: 13px;
@@ -58,6 +57,10 @@
 
 /* 商品名と商品説明 */
 
+.img-upload{
+  padding-bottom: 15px;
+}
+
 .new-vehicles {
   padding: 2vh 0;
 }
@@ -80,11 +83,6 @@
 /* /商品名と商品説明 */
 
 /* 商品の詳細など */
-.items-detail {
-  display: flex;
-  justify-content: space-between;
-  padding: 2vh 0;
-}
 
 .vehicles-detail>.form {
   width: 300px;
@@ -114,6 +112,7 @@
   font-size: 20px;
   margin-bottom: 4vh;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .back-btn {
