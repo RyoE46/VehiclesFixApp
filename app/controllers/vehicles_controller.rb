@@ -2,7 +2,7 @@ class VehiclesController < ApplicationController
   before_action :authenticate_user!, only: 
 
   def index
-    @vehicles = Vehicle.all.order('created_at DESC')
+    @vehicles = Vehicle.where(user_id: current_user.id).includes(:user).order("created_at DESC")
   end
 
   def new
