@@ -12,7 +12,7 @@
 
 ### Association
 - has_many: vehicles
-- has_many: vehicles_fixes
+- has_many: vehicle_fixes
 
 
 ## vehiclesテーブル
@@ -27,7 +27,7 @@
 
 ### Association
 
-- has_many: vehicles_fixes
+- has_many: vehicle_fixes
 - belongs_to: user
 - belongs_to: vehicle_type
 - has_one_attached: image
