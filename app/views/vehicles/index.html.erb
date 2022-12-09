@@ -5,6 +5,7 @@
     <h2 class='title'>Vehicle List</h2>
     <ul class='vehicle-lists'>
 
+
       <% @vehicles.each do |vehicle| %>
         <li class='list'>
           
@@ -25,7 +26,7 @@
           <% end %>
           <%=link_to 'Edit Information', edit_vehicle_path(vehicle.id), class:"edit-btn" %>
         </li>
-      <% end %>
+        <% end %>
 
 
       <% if @vehicles.empty? %>
