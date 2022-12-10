@@ -19,7 +19,9 @@
 }
 
 .repair-list{
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1.5px #744f062f solid;
 }
 
 .repair-title{
