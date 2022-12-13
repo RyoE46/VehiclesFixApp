@@ -125,3 +125,12 @@
 }
 
 /* /下部ボタン */
+
+/* プレビュー画像 */
+
+.preview-image {
+  width: 29vw;
+  object-fit: cover;
+}
+
+/* /プレビュー画像 */
