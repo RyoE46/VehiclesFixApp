@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
   // 新規投稿・編集ページのフォームを取得
-  const vehiclesForm = document.getElementById('item-image');
+  const vehicle_fixesForm = document.getElementById('item-image');
    // プレビューを表示するためのスペースを取得
   const previewList = document.getElementById('previews');
   // 新規投稿・編集ページのフォームがないならここで終了。「!」は論理否定演算子。
-  if (!vehiclesForm) return null;
+  if (!vehicle_fixesForm) return null;
 
   // input要素を取得
-  const fileField = document.querySelector('input[type="file"][name="vehicle[image]"]');
+  const fileField = document.querySelector('input[type="file"][name="vehicle_fix[image]"]');
   // input要素で値の変化が起きた際に呼び出される関数
   if (!fileField){ return false;}
   fileField.addEventListener('change', function(e){
