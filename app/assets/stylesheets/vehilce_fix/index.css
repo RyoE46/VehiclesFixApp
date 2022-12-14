@@ -81,3 +81,16 @@
 
 /* //vehicle_fix_index */
 
+.fix-img {
+  height: 25vh;
+  object-fit: cover;
+}
+
+.image-delete-button {
+  color: #744f06b3;
+  text-align: center;
+  border: solid 1px #744f06b3;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}

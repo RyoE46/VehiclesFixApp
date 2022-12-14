@@ -44,7 +44,7 @@ class VehicleFixesController < ApplicationController
 
   private
   def vehicle_fix_params
-    params.require(:vehicle_fix).permit(:id, :title, :content, :image, :mileage).merge(user_id: current_user.id, vehicle_id: @vehicle.id)
+    params.require(:vehicle_fix).permit(:id, :title, :content, {images: []}, :mileage).merge(user_id: current_user.id, vehicle_id: @vehicle.id)
   end
 
   def set_vehicle
