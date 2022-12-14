@@ -32,12 +32,13 @@
               走行距離：<%= vehicle_fix.mileage %>Km
             </div>
             
-            <div class='vehicle-img-content'>
-              <% if vehicle_fix.images.present? %>
+            <div class='fix-img-contents'>
+
+              <% if vehicle_fix.images.present? %>   
                 <%= image_tag vehicle_fix.images[0], class: "fix-img" %>
                 <% vehicle_fix.images[1..-1].each do |image| %>
                     <%= image_tag image, class: "fix-img"%>
-                <%end%>
+                <% end %>
               <% else %>
                 <h1 class='no-img-text'>No Image</h1>
               <% end %>

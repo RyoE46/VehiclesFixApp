@@ -81,6 +81,10 @@
 
 /* //vehicle_fix_index */
 
+.fix-img-contents {
+  position: relative;
+}
+
 .fix-img {
   height: 25vh;
   object-fit: cover;
