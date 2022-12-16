@@ -33,7 +33,7 @@
 - has_one_attached: image
 
 
-## vehicles_fixesテーブル
+## vehicle_fixesテーブル
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
@@ -49,5 +49,5 @@
 - belongs_to: user
 - belongs_to: vehicles
 - belongs_to: fix_spot
-- has_one_attached: image
+- has_many_attached: image
 
