@@ -100,9 +100,10 @@ https://vehiclesfixapp.onrender.com
 # 洗い出した要件
 https://docs.google.com/document/d/1tE56WylMXXLWoJVe-oq2JuOHht-pQE77F7V4VzfHvAk/edit?usp=sharing
 
+
 # 実装した機能についての画像やGIFおよびその説明
 ## ユーザー登録画面
-・登録しているユーサーはここからログイン
+・登録しているユーザーはここからログイン
 
 ・登録をしていないユーザーは『Sign up』から新規登録を行う
 [![Image from Gyazo](https://i.gyazo.com/bc19940b85b4ec7c2487e50fee6cc265.png)](https://gyazo.com/bc19940b85b4ec7c2487e50fee6cc265)
