@@ -5,7 +5,7 @@ class CreateVehicles < ActiveRecord::Migration[6.0]
       t.string     :vehicle_name,    null: false
       t.string     :next_inspection, null: false
       t.references :user,        null: false, foreign_key: true 
-      #t.integer    :vehicle_type_id, null: false
+      t.integer    :vehicle_type_id, null: false
       t.timestamps
     end
   end

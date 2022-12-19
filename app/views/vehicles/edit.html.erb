@@ -38,6 +38,14 @@
 
         <div class="vehicles-explain">
           <div class="weight-bold-text">
+            車両形式
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:vehicle_type_id, VehicleType.all, :id, :name, {}, {class:"vehicle-type-select"}) %>
+        </div>
+
+        <div class="vehicles-explain">
+          <div class="weight-bold-text">
             次回車検年月
           </div>
           <%= f.text_field :next_inspection, class:"vehicles-text", id:"next-inspection", placeholder: "例 : 令和5年7月"  %>

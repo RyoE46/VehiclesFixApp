@@ -19,7 +19,8 @@
                 <%= vehicle.vehicle_name %><br>
               </h3>
               <div class='vehicle-inspection'>
-                <span>次回車検年月日：<%= vehicle.next_inspection %><br><br></span>
+                次回車検年月日：<%= vehicle.next_inspection %><br>
+                車両形式：<%= vehicle.vehicle_type.name %><br>
               </div>
             </div>
 
