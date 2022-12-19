@@ -57,7 +57,7 @@
         <div class="register-btn-contents">
           <%= f.submit "Register your vehicle" ,class:"register-btn" %>
           <%=link_to 'Back', root_path, class:"back-btn" %>
-          <%= link_to "Delete this vehicle all information", vehicle_path(@vehicle.id), method: :delete, class:"destroy-btn" %>
+          <%= link_to "Delete this vehicle all information", vehicle_path(@vehicle.id), method: :delete, class:"destroy-btn", "data-confirm" => "本当に車両情報を削除しますか？"%>
         </div>
 
 
