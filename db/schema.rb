@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2022_12_07_111322) do
     t.string "title", null: false
     t.text "content", null: false
     t.string "mileage"
+    t.integer "fix_spot_id", null: false
     t.bigint "user_id", null: false
     t.bigint "vehicle_id", null: false
     t.datetime "created_at", precision: 6, null: false

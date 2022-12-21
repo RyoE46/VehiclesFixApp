@@ -35,6 +35,14 @@
 
       <div class="repair-explain">
         <div class="weight-bold-text">
+          整備箇所区分
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:fix_spot_id, FixSpot.all, :id, :name, {}, {class:"vehicle-type-select"}) %>
+      </div>
+
+      <div class="repair-explain">
+        <div class="weight-bold-text">
           走行距離(半角数字)
         </div>
         <%= f.text_field :mileage, class:"repair-text", id:"mileage", placeholder: "例 : 145608"  %>
