@@ -10,14 +10,16 @@
 }
 
 
+  
 
 .top-page-header {
-  background-color: antiquewhite;
+  position: fixed;
+  background-color: rgba(255, 229, 198, 0.752);
   width: 100vw;
   height: 138px;
   padding: 2vh 3vw;
   display: flex;
-
+  z-index: 10;
 }
 
 .nav {
