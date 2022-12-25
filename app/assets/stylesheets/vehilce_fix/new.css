@@ -10,6 +10,7 @@
   flex-direction: column;
   min-width: 500px;
   width: 100vw;
+  padding-top: 138px;
 }
 
 .repair-info-main {
