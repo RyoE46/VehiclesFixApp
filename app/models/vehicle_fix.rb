@@ -6,7 +6,7 @@ class VehicleFix < ApplicationRecord
   validates :content, presence: true
   validates :images, length: { minimum: 0, maximum: 6, message: "6枚以下にしてください" }
 
-  validates :fix_spot_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :fix_spot_id, numericality: { other_than: 1, message: "を入力してください" }
 
 
   extend ActiveHash::Associations::ActiveRecordExtensions
