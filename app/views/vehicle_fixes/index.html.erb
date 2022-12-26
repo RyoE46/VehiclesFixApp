@@ -6,6 +6,7 @@
         <%= @vehicle.vehicle_name %>
       </div>
 
+
       <% if @vehicle_fixes.empty? %>
         <div class='new-repair-info'>
             Please register your Register your repair details for vehicle 
@@ -20,6 +21,10 @@
 
             <div class='repair-title'>
               <%= vehicle_fix.title %>
+            </div>
+
+            <div class='repair-days'>
+              <%= vehicle_fix.created_at.strftime('%Y/%m/%d') %>
             </div>
 
             <%=link_to 'Edit Information', edit_vehicle_vehicle_fix_path(@vehicle.id, id: vehicle_fix.id),class:"edit-btn" %>
@@ -44,6 +49,7 @@
                 <h1 class='no-img-text'>No Image</h1>
               <% end %>
             </div>
+
           </li>
       <% end %>
 
