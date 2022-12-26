@@ -8,6 +8,8 @@
   background-color: #f0ebe4;
   display: flex;
   justify-content: center;
+  padding-top: 138px;
+
 }
 
 /* form-wrapは商品購入画面でも使用しています */
@@ -15,6 +17,7 @@
   width: 50%;
   background-color: #ffffff;
   padding-bottom: 70px;
+
 }
 
 .form-header {
