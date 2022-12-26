@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      vehicle:
+        text: テキスト
+        image: 画像
+        manufacturer: メーカー
+        vehicle_name: 車種名
+        vehicle_type_id: 車両形式
+      vehicle_fix:
+        title: タイトル
+        content: 詳細内容
+        fix_spot_id: 整備箇所区分
