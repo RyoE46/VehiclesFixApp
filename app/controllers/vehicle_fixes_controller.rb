@@ -1,6 +1,7 @@
 class VehicleFixesController < ApplicationController
   before_action :authenticate_user!, only: 
 
+
   def index
     @vehicle = Vehicle.find(params[:vehicle_id])
     @vehicle_fixes = VehicleFix.where(vehicle_id:params[:vehicle_id]).order('created_at DESC')
