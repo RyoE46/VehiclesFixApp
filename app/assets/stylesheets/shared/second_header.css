@@ -1,14 +1,15 @@
 /* 検索ボックス */
 .search-boxes{
   height: 113px;
-  line-height: 90px;
+  padding-top: 25px;
+
 }
 
 .search-box{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 13px;
+  padding: 5px;
 }
 
 .search-text{
@@ -40,4 +41,19 @@
   left: 32px;
   position: fixed;
   padding: 8px;
+}
+
+.fix-spot-label{
+  color: #00000082;
+  padding-right: 10px;
+}
+
+.search-spot{
+  background-color: rgba(255, 255, 255, 0.493);
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  width: 32vw;
+  height: 30px;
+
 }

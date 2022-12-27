@@ -38,7 +38,7 @@
           整備箇所区分
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:fix_spot_id, FixSpot.all, :id, :name, {}, {class:"vehicle-type-select"}) %>
+        <%= f.collection_select(:fix_spot_id, FixSpot.all, :id, :name, {include_blank: "---"}, {class:"vehicle-type-select"}) %>
       </div>
 
       <div class="repair-explain">
