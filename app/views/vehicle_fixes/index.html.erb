@@ -1,6 +1,8 @@
-<%= render "shared/header" %>
+<%= render "shared/second-header" %>
 <div class='main'>
   <div class='repair-contents'>
+
+
  
       <div class='fix-title'>
         <%= @vehicle.vehicle_name %>
@@ -15,7 +17,7 @@
 
     <ul class='repair-lists'>
 
-      <% @vehicle_fixes.each do |vehicle_fix| %>
+      <% @search_vehicle_fixes.each do |vehicle_fix| %>
         
           <li class='repair-list'>
 

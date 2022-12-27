@@ -1,0 +1,43 @@
+/* 検索ボックス */
+.search-boxes{
+  height: 113px;
+  line-height: 90px;
+}
+
+.search-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+}
+
+.search-text{
+  background-color: rgba(255, 255, 255, 0.493);
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  width: 40vw;
+  height: 30px;
+
+}
+
+.search-btn{
+  border-radius: 10px;
+  border: none;
+  width: 5vw;
+  height: 30px;
+  background: #744f064e;
+  color: #ffffff;
+}
+
+.return-top{
+  width: 180px;
+  height: 40px;
+  background: #5b5b5bb3;
+  text-align: center;
+  border-radius: 10px;
+  top: 250px;
+  left: 32px;
+  position: fixed;
+  padding: 8px;
+}

@@ -72,3 +72,5 @@ gem 'jquery-rails'
 gem 'select2-rails'
 
 gem 'rails-i18n'
+
+gem 'ransack'

@@ -1,11 +1,20 @@
 <header class='top-page-header'>
   <div class='nav'>
     <ul class='header-main'>
-      <li><%= link_to 'Vehicles Fix', "/", class: "header-main-title" %></li>
+      <li><%= link_to 'Vehicles Fix', vehicle_vehicle_fixes_path, class: "header-main-title" %></li>
       <li><%= link_to image_tag("Vehicle-fix-title.png", class:"Vehicle-fix-title-png"), "/" %></li>
     </ul>
 
- 
+    <ul class="search-boxes">
+
+      <li class="search-box">
+        <%= search_form_for @search, url: vehicle_vehicle_fixes_path do |f| %>
+          <%= f.text_field :title_or_content_cont  ,placeholder: ' 検索する内容を入力...' ,:class => 'search-text'%>
+          <%= f.submit ("検索") , class: 'search-btn'%>
+        <% end %>
+      </li>
+
+    </ul>
 
     <ul class='lists-right'>
       <% if user_signed_in? %>
@@ -16,6 +25,10 @@
       <% end %>
     </ul>
   </div>
+
+  <%= link_to root_path, class: 'return-top' do %> 
+    <span class='purchase-btn-text'>Return to Top</span>
+  <% end %>
 
 
 
