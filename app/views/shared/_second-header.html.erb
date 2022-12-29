@@ -6,12 +6,17 @@
     </ul>
 
     <ul class="search-boxes">
-
-      <li class="search-box">
         <%= search_form_for @search, url: vehicle_vehicle_fixes_path do |f| %>
-          <%= f.text_field :title_or_content_cont  ,placeholder: ' 検索する内容を入力...' ,:class => 'search-text'%>
-          <%= f.submit ("検索") , class: 'search-btn'%>
+          <li class="search-box">
+              <%= f.text_field :title_or_content_cont  ,placeholder: ' 検索する内容を入力...' ,:class => 'search-text'%>
+              <%= f.submit ("検索") , class: 'search-btn'%>
+          </li>
+          <li class="search-box">
+              <%= f.label :fix_spot_id_eq, '整備箇所区分' ,:class => 'fix-spot-label'%>
+              <%= f.collection_select(:fix_spot_id_eq, FixSpot.all, :id, :name, {include_blank: "---"}, {class:"search-spot"}) %>
+          </li>
         <% end %>
+        
       </li>
       <li class="search-box">
         <%= search_form_for @search, url: vehicle_vehicle_fixes_path do |f| %>
