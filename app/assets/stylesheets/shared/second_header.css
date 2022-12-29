@@ -1,7 +1,8 @@
 /* 検索ボックス */
 .search-boxes{
   height: 113px;
-  padding-top: 25px;
+
+  padding-top: 20px;
 
 }
 
@@ -9,7 +10,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding-top: 5px;
+  color: rgba(0, 0, 0, 0.500);
+
 }
 
 .search-text{
@@ -19,7 +22,7 @@
   font-size: 20px;
   width: 40vw;
   height: 30px;
-
+  color: rgba(0, 0, 0, 0.500);
 }
 
 .search-btn{
