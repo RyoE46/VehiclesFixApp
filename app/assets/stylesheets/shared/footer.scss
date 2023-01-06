@@ -1,9 +1,13 @@
 .footer {
   width: 100vw;
-  padding: 5vh 0;
+  height: 9vh;
+  padding: 1vh 0;
   color: #FFF;
-  background-color: #272727;
+  background-color: #27272791;
   text-align: center;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
 }
 
 .footer-contents {
