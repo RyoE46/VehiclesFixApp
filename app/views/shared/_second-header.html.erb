@@ -6,7 +6,7 @@
     </ul>
 
     <ul class="search-boxes">
-        <%= search_form_for @search, url: vehicle_vehicle_fixes_path do |f| %>
+        <%= search_form_for @search, url: "#" do |f| %>
           <li class="search-box">
               <%= f.text_field :title_or_content_cont  ,placeholder: ' 検索する内容を入力...' ,:class => 'search-text'%>
               <%= f.submit ("検索") , class: 'search-btn'%>
