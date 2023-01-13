@@ -9,7 +9,7 @@
         <%= search_form_for @search, url: "#" do |f| %>
           <li class="search-box">
               <%= f.text_field :title_or_content_cont  ,placeholder: ' まだ検索はできません ' ,:class => 'search-text'%>
-              <%#= f.submit ("検索") , class: 'search-btn'%>
+              <%= f.submit ("検索") , class: 'search-btn'%>
           </li>
         
           <li class="search-box">
