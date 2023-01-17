@@ -14,7 +14,7 @@
         
           <li class="search-box">
               <%= f.label :fix_spot_id_eq, '整備箇所区分' %>
-              <%= f.collection_select(:fix_spot_id_eq, FixSpot.all, :id, :name, {include_blank: "---"} ,:class => 'search-text') %>
+              <%= f.collection_select(:fix_spot_id_eq, FixSpot.all, :id, :name, {include_blank: "  "} ,:class => 'search-text') %>
           </li>
         <% end %>
     </ul>
