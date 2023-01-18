@@ -1,0 +1,40 @@
+<%= render "shared/header" %>
+
+<div class="vehicle-info-contents">
+  <div class="vehicle-info-main">
+    <h2 class="vehicle-info-title">Enter your vehicle information</h2>
+
+      <%= form_with model: @user, url: profile_path, local: true do |f| %>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
+        <%# 追加車種の情報 %>
+        <div class="new-vehicles">
+          <div class="weight-bold-text">
+            Eメールアドレス
+            <span class="indispensable">必須</span>
+          </div>
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+
+        <div class="vehicles-explain">
+          <div class="weight-bold-text">
+            ニックネーム
+            <span class="indispensable">必須</span>
+          </div>
+            <%= f.label :nickname %>
+            <%= f.text_field :nickname, class: "form-control" %>
+        </div>
+
+
+        <%# /追加車種の情報 %>
+
+
+      <% end %>
+  </div>
+
+
+</div>
+
+ <%= render "shared/footer" %>

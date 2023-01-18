@@ -5,4 +5,6 @@ Rails.application.routes.draw do
     resources :vehicle_fixes
   end
 
+  resource :profile, only: %i[show edit update]
+
 end

@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<div class="vehicle-info-contents">
+  <div class="vehicle-info-main">
+    <h2 class="vehicle-info-title"> Your  information</h2>
+
+
+
+        <%# 追加車種の情報 %>
+
+        <div class="vehicles-explain">
+          <div class="weight-bold-text">
+            ニックネーム<br><br>
+          </div>
+          <div class='repair-title'>
+            <%= current_user.nickname %>
+          </div>
+        </div>
+
+        <div class="new-vehicles">
+          <div class="weight-bold-text">
+            Eメールアドレス<br><br>
+          </div>
+          <div class='repair-title'>
+            <%= current_user.email %>
+          </div>
+        </div>
+
+        <%# /追加車種の情報 %>
+
+
+  </div>
+
+
+</div>
+
+ <%= render "shared/footer" %>
